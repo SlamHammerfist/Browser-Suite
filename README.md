@@ -1,6 +1,4 @@
-# DnD5e Physical Items Browser
-
-![](assets/logo.png)
+!(assets/logo.png)
 
 A lightweight, theme‑accurate enhancement for the DnD5e system that adds a clean, modern, sheet‑native interface for browsing, selecting, and adding physical items to an actor. Designed to feel like a natural extension of the official DnD5e UI.
 
@@ -90,4 +88,5 @@ Adds all selected items at once, preserving:
 ## 🤖 AI Usage
 
 This module was developed with assistance from Microsoft Copilot, with extensive testing, iteration, and architectural decisions made by 
+
 the author.
