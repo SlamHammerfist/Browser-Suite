@@ -1,0 +1,25 @@
+{
+  "id": "browser-suite",
+  "title": "Browser Suite",
+  "description": "Adds multi-select, cost totals, and enhanced UI to the DnD5e Compendium Browser.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Slam Hammerfist"
+    }
+  ],
+  "esmodules": ["scripts/main.js"],
+  "styles": [
+    "styles/shared.css",
+    "styles/spell-browser.css",
+    "styles/physical-confirm.css",
+    "styles/toggles.css"
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

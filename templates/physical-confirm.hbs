@@ -1,0 +1,76 @@
+<div id="physical-confirm-dialog" class="physical-confirm-dialog dnd5e2">
+
+  {{!-- Buy Mode / Free Mode Toggle --}}
+  <div class="mode-row">
+    <div class="slide-toggle free-mode-toggle">
+      <div class="slide-toggle-track">
+        <div class="slide-toggle-thumb">$</div>
+      </div>
+    </div>
+
+    <div class="mode-label">Buy Mode</div>
+  </div>
+  
+  {{!-- Groups --}}
+  {{#each groups as |items key|}}
+
+    {{!-- Group Header WITH column labels --}}
+    <div class="group-header items-header header">
+      <div class="group-title">{{lookup ../groupLabels key}}</div>
+      <div class="header-checkbox-spacer"></div>
+      <div class="item-header item-quantity">Quantity</div>
+      <div class="item-header item-price">Cost</div>
+    </div>
+
+    <ul class="physical-item-list">
+      {{#each items}}
+      <li class="physical-row" data-uuid="{{uuid}}">
+
+        {{!-- Checkbox --}}
+        <input type="checkbox" class="physical-check">
+
+        {{!-- Item block --}}
+        <div class="physical-item" data-uuid="{{uuid}}">
+          <img class="item-image" src="{{img}}" alt="{{name}}">
+          <div class="name-stacked">
+            <span class="title">{{name}}</span>
+            <span class="subtitle">{{type}}</span>
+          </div>
+        </div>
+
+        {{!-- Quantity --}}
+        <div class="physical-qty item-detail item-quantity">
+          <a class="adjustment-button" data-action="decrease">
+            <i class="fa-solid fa-minus"></i>
+          </a>
+
+          <input class="qty-input"
+                 type="text"
+                 value="1"
+                 inputmode="numeric"
+                 pattern="^[+=\\-]?\\d*"
+                 min="1">
+
+          <a class="adjustment-button" data-action="increase">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+        </div>
+
+        {{!-- Cost --}}
+        <div class="price-badge" data-price="{{system.price.value}}">
+          {{system.price.value}} {{system.price.denomination}}
+        </div>
+
+      </li>
+      {{/each}}
+    </ul>
+
+  {{/each}}
+
+  {{!-- Footer Total --}}
+  <div class="physical-total">
+    <span>Total:</span>
+    <span class="physical-total-value">0 gp</span>
+  </div>
+
+</div>
