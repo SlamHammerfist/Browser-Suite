@@ -44,7 +44,7 @@ export const openPhysicalConfirmDialog = async (actor, items) => {
   // RENDER TEMPLATE
   // ---------------------------------------------------------
   const html = await foundry.applications.handlebars.renderTemplate(
-    "modules/item-browser/templates/physical-confirm.hbs",
+    "modules/browser-suite/templates/physical-confirm.hbs",
     {
       actorName: actor.name,
       groups,
@@ -368,4 +368,5 @@ export const openPhysicalConfirmDialog = async (actor, items) => {
   if (docs.length) {
     await actor.createEmbeddedDocuments("Item", docs);
   }
+
 };
